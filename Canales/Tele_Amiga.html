@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../DISEÑO/Diseño.css">
+    <title>Tele Amiga</title>
+</head>
+<body>
+  <header>
+    <div id="Menu">            
+        <a href="../index.html">Pagina Principal</a>
+        <a href="Cristo_Vision.html">Siguiente Canal</a>
+        <a href="Maria_Vision.html">Anterior Canal</a>
+    </div>
+  </header>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          let lazyIframe = document.querySelector("iframe.lazy");
+          if (lazyIframe) {
+            lazyIframe.src = lazyIframe.getAttribute("data-src");
+          }
+        });
+    </script>
+
+    <section  class="Contenedor_1">
+        <iframe class="lazy lazy-hidden iframePlayerCustom"  data-lazy-type="iframe" data-src="https://player.instantvideocloud.net/#/embed/e682c191" frameborder="0" allowfullscreen="allowfullscreen" height="600"></iframe><noscript><iframe class="iframePlayerCustom" src="https://player.instantvideocloud.net/#/embed/e682c191" frameborder="0" allowfullscreen="allowfullscreen" height="600"></iframe>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Dev.Edisson. Todos los derechos reservados.</p>
+  </footer>
+    
+</body>
+</html>

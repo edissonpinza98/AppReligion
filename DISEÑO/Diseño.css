@@ -1,0 +1,254 @@
+body{
+   background-color: black;
+   color: white;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   overflow: hidden;
+}
+video{
+   z-index: -1;
+   width: 100%;
+}
+
+header{
+   height: 50px;
+   display: flex;
+   font-family: monospace;
+   text-align: center;
+   padding: 0;
+   margin: 0;
+   background-color: rgba(0, 0, 0, 0);
+}
+
+h1{
+   color: blanchedalmond;
+   position: relative;
+   left: 35%;
+   font-size: 50px;
+   padding: 0;
+   margin: 0;
+}
+
+#Menu{
+   background-color: black;
+   font-size: 10px;
+   padding:0;
+   margin: 0; 
+   position: relative;
+   left: 23%;
+   top: 15px;
+   height: 30px;
+   width: 580px;
+   border: 1px solid white;
+   border-radius: 10px;
+   box-shadow: 0 0 30px white;
+}
+#Menu:hover{
+   width: 600px;
+}
+
+
+a{
+   text-align: left;
+   color: rgb(255, 255, 255);
+   font-size: 20px;
+   font-family: Impact;
+   text-decoration: none;
+   margin: 10px;
+}
+
+a:hover{
+   font-size: 25px;
+   box-shadow: 0px 5px 0 rgb(0, 0, 0);
+   color: blanchedalmond;
+}
+
+#Logo{
+   position: relative;
+   left: -30%;
+   width: 80px;
+   height:80px;
+   margin: 0;
+   padding: 0;
+}
+
+.Contenedor_1{
+   display: flex;
+   position: relative;
+   left: 20%;
+   margin-top: 10%;
+}
+
+iframe{
+   border: 1px solid blanchedalmond;
+   border-radius: 8px;
+   width: 600px;
+   height: 400px;
+}
+
+iframe:hover{
+   box-shadow: 0  0 50px white;
+}
+
+p{
+   text-align: center;
+   font-family:sans-serif;
+   font-size: 12px;
+}
+
+footer {
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.7);
+   color: white;
+   padding: 10px 0;
+   left: 0;
+}
+
+/* Estilos para tablets 
+@media screen and (max-width: 1024px) {
+   video{
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   }
+
+   header{
+      position: relative;
+      left: 0%;
+      width: 1024px;
+      height: auto;
+      background-color: black;
+      box-shadow: 0 0 80px black;
+   }
+
+   h1{
+      font-size: 190%;
+      position: relative;
+      top: 100%;
+      left: 50%;
+      margin: 0;
+      padding: 0;
+   }
+    #Menu {
+      position: relative;
+      left: 0%;
+      width: 1024px;
+      padding:0;
+      font-size: 10px;
+    }
+
+    a{
+      position: relative;
+      left: 30%;
+    }
+
+
+    #Logo {
+        left: 0%;
+        width: 60px;
+        height: 60px;
+    }
+
+    .Contenedor_1 {
+        left: 10%;
+        margin-top: 15%;
+    }
+
+    iframe {
+        width: 500px;
+        height: 350px;
+    }
+} */
+
+/* Estilos para móviles */
+@media screen and (max-width: 480px) {
+
+   video{
+      z-index: -999;
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      position: fixed;
+      top: 0;
+      left: 0;
+   }
+
+   header{
+      position: relative;
+      left: 0%;
+      height: auto;
+      background-color: black;
+      box-shadow: 0 0 80px black;
+   }
+
+   h1{
+      font-size: 190%;
+      position: relative;
+      top: 15%;
+   }
+    #Menu {
+      width: 90%;
+      position: relative;
+      left: 1%;
+      flex-direction: column;
+      align-items: center;
+      padding: 5px;
+    }
+
+    #Menu,a {
+        margin: 8px 0;
+       
+        text-align: center;
+        font-size: 85%;        
+    }
+
+    a{
+      margin-left: 2px;
+      border: 1px solid black;
+      padding: 2px;
+      margin-top: 5px;
+    }
+    a:hover, Menu:hover{
+      display: none;
+    }
+
+    #Logo {
+        position: relative;
+        left: -38%;
+        width: 50px;
+        height: 50px;
+        margin: 0;
+        display: block;
+    }
+
+    .Contenedor_1 {
+        left: 0;
+        margin-top: 5%;
+        width: 100%;
+        justify-content: center;
+        padding: 0 15px;
+    }
+
+    iframe {
+        width: 99%;
+        height: 300px;
+        margin: 0;
+        position: relative;
+        left: -4%;
+        margin-top: 20%;
+    }
+
+    footer {
+        position: fixed;
+        padding: 5px 0;
+    }
+
+    p {
+        font-size: 10px;
+        margin: 5px 0;
+    }
+}
