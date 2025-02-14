@@ -28,20 +28,16 @@ body {
    transition: opacity 1.5s ease-out;
 }
 
-video{
-   z-index: -1;
-   width: 100%;
-}
-
-header{
-   height: 50px;
+.Encabezado{
+   position: relative;
+   top: 50%;
+   height: 60px;
    display: flex;
    font-family: monospace;
    text-align: center;
    padding: 0;
    margin: 0;
-   background-color: rgba(0, 0, 0, 0);
-   
+   background-color: rgba(0, 0, 0, 0);   
 }
 
 @keyframes parpadeo {
@@ -56,46 +52,40 @@ header{
    }
 }
 
-#Menu, #Menu2 {
-   animation: parpadeo 2s infinite;
+#Contenedor1{
+   background-color: rgba(0, 0, 0, 0.267);
+   position: relative;
+   top: -695px;
+   left: 10%;
+   width: 70%;
+   height: 440px;
+   padding: 20px;
 }
 
-#Menu:hover, #Menu2:hover {
-   animation: none;
+#Logo_canal{
+   width: 200px;
+   height: 200px;
+   border-radius: 10px;
 }
 
+#Logo_canal, #Menu2 {
+   animation: parpadeo 1s infinite;
+}
 
 h1{
    color: blanchedalmond;
    position: relative;
    left: 35%;
-   font-size: 50px;
+   font-size: 40px;
    padding: 0;
    margin: 0;
 }
 
-#Menu{
-   background-color: black;
-   font-size: 10px;
-   padding:0;
-   margin: 0; 
-   position: relative;
-   left: 23%;
-   top: 15px;
-   height: 30px;
-   width: 580px;
-   border: 1px solid white;
-   border-radius: 10px;
-   box-shadow: 0 0 30px white;
-}
-
-
 #Menu2{
    position:relative;
-   left: -2%;
+   left: 28%;
    margin-top: 3%;
 }
-
 
 a{
    text-align: left;
@@ -107,26 +97,35 @@ a{
 }
 
 a:hover{
-   background-color: rgba(85, 49, 49, 0.521);
-   box-shadow: 0px 2.5px 0 white;
+   opacity: 0.5;
+   border-radius: 10px;
    color: blanchedalmond;
+}
+
+#Logo_canal:hover{
+   border: 1px solid black;
+   width: 205px;
+   height: 205px;
+   box-shadow: 0 0 10px rgb(248, 121, 1);
+}
+
+/*Diseño de columnas de los canales*/
+
+#Menu_Columna3{
+   position: relative;
+   left: 63%;
+   top: -448px;
 }
 
 #Logo{
    position: relative;
-   left: -30%;
+   left: -20%;
+   top: -10px;
    width: 80px;
    height:80px;
    margin: 0;
    padding: 0;
 }
-
-/*.Contenedor_1{
-   display: flex;
-   position: relative;
-   left: 20%;
-   margin-top: 15%;
-}*/
 
 iframe{
    display: flex;
@@ -163,88 +162,70 @@ footer {
 }
 
 /* Estilos para móviles */
-@media screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
+   body {
+      overflow: auto;
+   }
 
    video{
-      z-index: -999;
-      width: 100%;
-      height: 100vh;
-      object-fit: cover;
-      position: fixed;
-      top: 0;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   object-fit: cover;
+   }
+
+   .Encabezado {
+      flex-direction: column;
+      height: auto;
+   }
+
+   h1 {
+      font-size: 24px;
       left: 0;
    }
 
-   header{
-      position: relative;
-      left: 0%;
-      height: auto;
-      background-color: black;
-      box-shadow: 0 0 80px black;
+   #Logo {
+      left: 0;
+      top: 0;
+      width: 60px;
+      height: 60px;
    }
 
-
-   h1{
-      font-size: 190%;
-      margin-top: 2%;
-   }
-   
-#Menu {
+   #Contenedor1 {
       width: 90%;
-      position: relative;
-      left: 3.5%;
-      flex-direction: column;
-      align-items: center;
-      padding: 5px;
-    }
+      left: 5%;
+      top: 0;
+      height: auto;
+   }
 
-    #Menu,a {
-        margin: 8px 0;       
-        text-align: center;
-        font-size: 85%;        
-    }
+   #Menu_Columna1, #Menu_Columna2, #Menu_Columna3 {
+      position: static;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+   }
 
-    a{
-      margin-left: 2px;
-      border: 1px solid black;
-      padding: 2px;
-      margin-top: 5px;
-    }
+   #Logo_canal {
+      width: 150px;
+      height: 150px;
+   }
 
+   iframe {
+      width: 100%;
+      height: auto;
+      left: 0;
+      margin-top: 20px;
+   }
 
-    #Logo {
-        position: relative;
-        left: -38%;
-        width: 50px;
-        height: 50px;
-        margin: 0;
-        display: block;
-    }
+   a {
+      font-size: 16px;
+   }
 
-    .Contenedor_1 {
-        left: 0;
-        margin-top: 5%;
-        width: 100%;
-        justify-content: center;
-        padding: 0 15px;
-    }
-
-    iframe {
-        width: 99%;
-        height: 300px;
-        margin: 0;
-        position: relative;
-        left: -4%;
-        margin-top: 20%;
-    }
-
-    footer {
-        position: fixed;
-        padding: 5px 0;
-    }
-
-    p {
-        font-size: 10px;
-        margin: 5px 0;
-    }
+   footer {
+      position: static;
+      padding: 20px 0;
+   }
 }
