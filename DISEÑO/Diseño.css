@@ -4,6 +4,30 @@ body{
    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
    overflow: hidden;
 }
+@keyframes fadeIn {
+   0% {
+      opacity: 0;
+      transform: translateY(-20px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+body {
+   animation: fadeIn 1.5s ease-out;
+}
+
+.hidden {
+   opacity: 0;
+}
+
+.visible {
+   opacity: 1;
+   transition: opacity 1.5s ease-out;
+}
+
 video{
    z-index: -1;
    width: 100%;
@@ -17,7 +41,29 @@ header{
    padding: 0;
    margin: 0;
    background-color: rgba(0, 0, 0, 0);
+   
 }
+
+@keyframes parpadeo {
+   0% {
+      opacity: 1;
+   }
+   50% {
+      opacity: 0.3;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+#Menu, #Menu2 {
+   animation: parpadeo 2s infinite;
+}
+
+#Menu:hover, #Menu2:hover {
+   animation: none;
+}
+
 
 h1{
    color: blanchedalmond;
@@ -46,6 +92,12 @@ h1{
    width: 600px;
 }
 
+#Menu2{
+   position:relative;
+   left: -2%;
+   margin-top: 3%;
+}
+
 
 a{
    text-align: left;
@@ -71,11 +123,18 @@ a:hover{
    padding: 0;
 }
 
-.Contenedor_1{
+/*.Contenedor_1{
    display: flex;
    position: relative;
    left: 20%;
-   margin-top: 10%;
+   margin-top: 15%;
+}*/
+
+iframe{
+   display: flex;
+   position: relative;
+   left: 20%;
+   margin-top: 8%;
 }
 
 iframe{
@@ -185,12 +244,17 @@ footer {
       box-shadow: 0 0 80px black;
    }
 
+   
+
+
+
    h1{
       font-size: 190%;
       position: relative;
       top: 15%;
    }
-    #Menu {
+   
+#Menu {
       width: 90%;
       position: relative;
       left: 1%;
